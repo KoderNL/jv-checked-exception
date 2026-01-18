@@ -3,7 +3,8 @@ package core.basesyntax;
 public class PasswordValidator {
     private static final int PASSWORD_LENGTH = 10;
 
-    public void validate(String password, String repeatPassword) throws PasswordValidationException {
+    public void validate(String password, String repeatPassword)
+            throws PasswordValidationException {
         String message = "Wrong passwords";
         if (password == null || repeatPassword == null) {
             throw new PasswordValidationException(message);
@@ -16,4 +17,3 @@ public class PasswordValidator {
         }
     }
 }
-

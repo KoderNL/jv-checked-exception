@@ -5,8 +5,8 @@ public class UserService {
         final PasswordValidator passwordValidator = new PasswordValidator();
 
         try {
-            passwordValidator.validate(user.getPassword()
-                    , user.getRepeatPassword());
+            passwordValidator.validate(user.getPassword(),
+                    user.getRepeatPassword());
             saveUser(user);
         } catch (PasswordValidationException e) {
             System.out.println("Your passwords are incorrect. Try again.");
